@@ -1,0 +1,2 @@
+.table.table-form {width: auto;}
+.table-form > tbody > tr > td .form-control + .form-control {margin-top: 5px;}
