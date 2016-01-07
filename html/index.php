@@ -51,6 +51,7 @@ $config->installedVersion = $common->loadModel('setting')->getVersion();
 if(!(!is_numeric($config->version{0}) and $config->version{0} != $config->installedVersion{0}) and version_compare($config->version, $config->installedVersion, '>')) die(header('location: upgrade.php'));
 
 /* Remove install.php and upgrade.php. */
+/*
 if(file_exists('install.php') or file_exists('upgrade.php'))
 {
     $wwwDir = dirname(__FILE__);
@@ -64,7 +65,7 @@ Please remove install.php and upgrade.php under $wwwDir dir for security reason.
 EOT;
     die();
 }
-
+*/
 $app->parseRequest();
 $common->checkPriv();
 $app->loadModule();
