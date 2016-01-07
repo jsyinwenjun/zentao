@@ -7,5 +7,8 @@ RUN docker-php-ext-install pdo_mysql
 
 COPY . /var/www/
 
+RUN chmod o=rwx -R /var/www/tmp/
+
+RUN chmod o=rwx -R /var/www/www/data
 
 
